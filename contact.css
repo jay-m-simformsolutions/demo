@@ -1,0 +1,61 @@
+.content {
+    width: 50%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+form {
+    background-color: #aaa;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    display: flex;
+    align-content: space-between;
+}
+
+label {
+    padding: 10px 10px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    margin-left: 15px;
+    flex: 15%;
+}
+
+#submit{
+    background-color: #333;
+    color: floralwhite;
+    padding: 10px 20px;
+    margin-top: 8px;
+    border: none;
+    width: 30%;
+    align-self: center;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+input[type=text],input[type=email] {
+    margin: 8px 0;
+    border: none;
+    margin-left: 15px;
+    border: 3px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    margin: 8px 0;
+    padding: 25px 20px;
+    border: none;
+    width: 90%;
+    margin-left: 15px;
+    border: 3px solid #ccc;
+    border-radius: 4px;
+}
+
+@media screen and (max-width: 700px){
+    .content, #submit {
+        width: 95%;
+    }
+}

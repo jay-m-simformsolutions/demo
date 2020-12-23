@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="./home.css">
+</head>
+<body>
+    <main>
+        <header class="header">
+            <h1>Demo Website</h1>
+            <p>Your location is: <span id="demo"></span></p>
+            <hr>
+        </header>
+        
+        <div class="topnav">
+            <a class="active" href="#">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+            <a href="#" style="float:right">Signin</a>
+        </div>
+        
+        <div class="row">
+            <div class="leftcolumn">
+                <div class="card">
+                    <h2>TITLE HEADING</h2>
+                    <h5>Title description, Dec 7, 2017</h5>
+                    <div class="fakeimg" style="height: 250px;">
+                        <div class="table">
+                            <table>
+                                <tr>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Points</th>
+                                </tr>
+                                <tr>
+                                    <td>Peter</td>
+                                    <td>Griffin</td>
+                                    <td>$100</td>
+                                </tr>
+                                <tr>
+                                    <td>Lois</td>
+                                    <td>Griffin</td>
+                                    <td>$150</td>
+                                </tr>
+                                <tr>
+                                    <td>Joe</td>
+                                    <td>Swanson</td>
+                                    <td>$300</td>
+                                </tr>
+                                <tr>
+                                    <td>Cleveland</td>
+                                    <td>Brown</td>
+                                    <td>$250</td>
+                                </tr>
+                                <tr>
+                                    <td>Lois</td>
+                                    <td>Griffin</td>
+                                    <td>$150</td>
+                                </tr>
+                                <tr>
+                                    <td>Joe</td>
+                                    <td>Swanson</td>
+                                    <td>$300</td>
+                                </tr>
+                                <tr>
+                                    <td>Cleveland</td>
+                                    <td>Brown</td>
+                                    <td>$250</td>
+                                </tr>
+                                <tr>
+                                    <td>Lois</td>
+                                    <td>Griffin</td>
+                                    <td>$150</td>
+                                </tr>
+                                <tr>
+                                    <td>Joe</td>
+                                    <td>Swanson</td>
+                                    <td>$300</td>
+                                </tr>
+                                <tr>
+                                    <td>Cleveland</td>
+                                    <td>Brown</td>
+                                    <td>$250</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <p>Some text..</p>
+                    <p>A basic HTML page using HTML5 tags...</p>
+                </div>
+                <div class="card">
+                    <h2>Iframe</h2>
+                    <iframe src="F:\\WallPaper\\bat.jpg" name="index" height="400" width="100%" title="Iframe Example"></iframe>
+                    <p><a id="iframe" href="index.html" target="index">index.html</a></p>
+                </div>
+            </div>
+            <div class="rightcolumn">
+                <div class="card">
+                    <h2>Profile</h2>
+                    <div class="fakeimg aboutme tooltip">
+                        <span class="tooltiptext">Tooltip text</span>
+                        <img src="F:\\WallPaper\\bat.jpg" alt="My Image" height="90%" width="90%">
+                    </div>
+                    <p>Some text about me..</p>
+                </div>
+                <div class="card">
+                    <h3>Popular Post</h3>
+                    <div class="fakeimg"><p>Image</p></div>
+                    <div class="fakeimg"><p>Image</p></div>
+                    <div class="fakeimg"><p>Image</p></div>
+                </div>
+                <div class="card">
+                    <h3>Feedback</h3>
+                    <div class="form">
+                        <form action="#" class="body">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" placeholder="Enter your name">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="example@exe.com">
+                            <label for="Feedback">Feedback</label>
+                            <input type="text" id="text">
+                            <input type="submit" id="submit" placeholder="Submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <hr>
+            <h2>Footer</h2>
+        </footer>
+    </main>
+    <!--script>
+        var x = document.getElementById("demo");
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+        getLocation()
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude + ", Longitude: " + position.coords.longitude;
+        }
+    </script-->
+</body>
+</html>

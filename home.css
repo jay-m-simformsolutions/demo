@@ -1,0 +1,194 @@
+* {
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: Arial;
+    padding: 10px;
+    background: #000;
+}
+
+header {
+    padding: 30px;
+    text-align: center;
+    background: rgb(0, 0, 0);
+    color: #f1f1f1;
+}
+
+header h1 {
+    font-size: 50px;
+    padding-bottom: 25px;
+}
+a.active {
+    background-color: rgb(29, 26, 26);
+    color: #f2f2f2;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: #ddd;
+
+}
+.topnav a:hover {
+    background-color: rgb(29, 26, 26);
+    color: #f2f2f2;
+}
+
+.leftcolumn {   
+    float: left;
+    width: 75%;
+}
+.rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+}
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 30px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.aboutme{
+    position: relative;
+    height: 200px;
+}
+.aboutme>img{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+  
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+#iframe {
+    background-color: rgb(35, 32, 32);
+    color: floralwhite;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.table{
+    overflow-x:auto;
+    overflow-y:scroll;
+    height: 100%;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th {
+    background-color: rgb(35, 32, 32);
+    color: floralwhite;
+}
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
+tr:hover{
+    background-color: #333;
+    color: floralwhite;
+}
+
+form {
+    background-color: #aaa;
+    padding: 15px;
+}
+
+label {
+    width: 90%;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+#submit{
+    background-color: #333;
+    color: floralwhite;
+    padding: 10px 20px;
+    margin-top: 8px;
+    border: none;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+input[type=text],input[type=email] {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: none;
+    border: 3px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background: rgb(0, 0, 0);
+    margin-top: 20px;
+    color: #f1f1f1;
+}
+
+@media screen and (max-width: 800px) {
+.leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+}
+}
+
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}
