@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Task</title>
+    <style>
+        body {
+            color: #fff;
+            background-image: url("F:\\WallPaper\\black_spider_man.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-size: 100% 100%;   
+        }
+        #div1 {
+            width: 350px;
+            height: 70px;
+            padding: 10px;
+            border: 1px solid #aaaaaa;
+        }
+    </style>
+    <script>
+        function allowDrop(ev) {
+        ev.preventDefault();
+        }
+        
+        function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+        }
+        
+        function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>This is heading</h1>
+            <p>Your location is: <span id="demo"></span></p>
+            <hr>
+        </header>
+        <aside>
+            <ul>
+                <li>CSS framework</li>
+                <li>CSS flexbox</li>
+                <li>CSS grid</li>
+                <li>CSS float property</li>
+            </ul>
+        </aside>
+        <section>
+            <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <picture>
+                <source media="(min-width: 650px)" srcset="F:\\WallPaper\\ironman.jpg">
+                <source media="(min-width: 465px)" srcset="F:\\WallPaper\\black_spider_man.jpg">
+                <img src="F:\\WallPaper\\bat.jpg" width="350px" height="70px" id="drag1" draggable="true" ondragstart="drag(event)">
+            </picture>
+        </section>
+        
+        <svg width="300" height="200">
+            <circle cx="150" cy="100" r="80" stroke="green" stroke-width="4" fill="yellow" />
+        </svg>
+        <svg width="300" height="200">
+            <polygon points="100,10 40,198 190,78 10,78 160,198"
+            style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+        </svg>
+
+        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #f8f4f4;background: #fff;">
+        </canvas>
+        <article>
+            <h2>Background Cover</h2>
+            <pre>
+            If you want the background image to cover the entire element, you can set the background-size property to cover.
+
+            Also, to make sure the entire element is always covered, set the background-attachment property to fixed:
+
+            This way, the background image will cover the entire element, with no stretching (the image will keep its original proportions):</pre>
+
+            <dl>
+                <dt>Coffee</dt>
+                <dd>- black hot drink</dd>
+                <dt>Milk</dt>
+                <dd>- white cold drink</dd>
+            </dl>
+        </article>
+        <footer>
+            <hr>
+            <p>This is footer</p>
+        </footer>
+    </main>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.moveTo(0, 0);
+        ctx.lineTo(200, 100);
+        ctx.moveTo(200, 0);
+        ctx.lineTo(0, 100);
+        ctx.stroke();
+        
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+        ctx.stroke();
+
+        var x = document.getElementById("demo");
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+        getLocation()
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude + ", Longitude: " + position.coords.longitude;
+        }
+    </script>
+</body>
+</html>
